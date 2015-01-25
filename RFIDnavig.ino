@@ -54,58 +54,38 @@ void checkmytags() // compares each tag against the tag just read
   if (comparetag(newtag, tag1) == true)
   {
     ok++;//ok=1
-    Serial.println("Welcome to Sumeru");
-    Serial.println(" Please move forward to enter or backwards to exit");
+    //Do something in this condition
   }
   if (comparetag(newtag, tag2) == true)
   {
     ok++;
-    Serial.println("In the front is the shoe rack");
-    Serial.println("Please take a left turn for the hall and kitchen");
-    Serial.println("Points 3,4 correspond to Hall and Kitchen Respectively");
-    Serial.println("Please turn around to exit");
+    //Do something on case 2
   }
   if (comparetag(newtag, tag3) == true)
   {
     ok++;
-    Serial.println(" Welcome to checkpoint number 3");
-    Serial.println(" This is the hall");
-    Serial.println(" Towards your right is the way to washroom ");
-    Serial.println("If you want to go to the kitchen please move forward");
-    Serial.println("If you are returning from the washroom , you can move to the right for checkpoint number 4");
     delay(100);
   }
   if (comparetag(newtag, tag4) == true)
   {
     ok++;
-    Serial.println("This is checkpoint 4");
-    Serial.println("Towards your front is the kitchen");
-    Serial.println("Towards your left is the temple. Please move forward to check point 5 for more information on the temple");
-    Serial.println("Towards you right is Bhavana's room");
-    Serial.println("Please move to checkpoint for the same");
-    Serial.println("For exiting , please turn around. Checkpoint 7,8,9 will guide you outside");
+    
   }
   if (comparetag(newtag, tag5) == true)
   {
     ok++;
-    Serial.println("In front of you is the temple");
-    Serial.println(" If you wish to exit , please go to check point 4");
-    Serial.println("Checkpoints 7,8,9 will guide you outside");
-    Serial.println("If you wish to check out Bhavana's room , please move forward to checkpoint 5");
+    
   }
    if (comparetag(newtag, tag6) == true)
   {
     ok++;
-    Serial.println("Welcome to Bhavana's room");
-    Serial.println("This is the last check point");
-    Serial.println("You may exit now");
-    Serial.println("Points 7,8,9 will help you exit");
+    
     
   }
    if (comparetag(newtag, tag7) == true)
   {
     ok++;
-    Serial.println("You are now moving towards the exit");
+    
   }
 }
  
@@ -141,7 +121,6 @@ void readTags()
   }
   else if (ok == 0) // if we didn't have a match
   {
-    Serial.println("End of the steet , please take either a left or a right");
     digitalWrite(no, HIGH);
     delay(1000);
     digitalWrite(no, LOW);
